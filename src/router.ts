@@ -1,12 +1,6 @@
 import { initTRPC } from '@trpc/server'
 
-import { prisma } from './prisma'
-
-export const createContext = () => {
-  return {
-    prisma
-  }
-}
+import { createContext } from './context'
 
 const t = initTRPC.context<typeof createContext>().create()
 
