@@ -1,9 +1,11 @@
 import { PrismaClient } from '@prisma/client/edge'
 
-export const prisma = new PrismaClient({
-  datasources: {
-    db: {
-      url: process.env.DATABASE_URL
+export const initPrismaClient = (url: string) => {
+  return new PrismaClient({
+    datasources: {
+      db: {
+        url
+      }
     }
-  }
-})
+  })
+}

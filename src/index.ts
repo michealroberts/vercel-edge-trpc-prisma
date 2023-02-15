@@ -14,7 +14,9 @@ addEventListener('fetch', (event) => {
       endpoint: '/api/v1',
       req: event.request,
       router: appRouter,
-      createContext
+      createContext: () => {
+        return createContext(process.env.DATABASE_URL || '')
+      }
     })
   )
 })

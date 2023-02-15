@@ -1,7 +1,7 @@
-import { prisma } from './prisma'
+import { initPrismaClient} from './prisma'
 
-export const createContext = () => {
+export const createContext = (DATABASE_URL: string) => {
   return {
-    prisma
+    prisma: initPrismaClient(DATABASE_URL)
   }
 }
