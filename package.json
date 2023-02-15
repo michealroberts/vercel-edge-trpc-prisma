@@ -13,7 +13,7 @@
     "format": "prettier --write .",
     "lint": "eslint --ext .ts --fix",
     "lint:staged": "lint-staged",
-    "db:generate": "prisma generate",
+    "db:generate": "prisma generate --data-proxy",
     "db:push": "prisma db push",
     "db:seed": "ts-node ./src/seed.ts",
     "db:flush": "ts-node ./src/flush.ts",
