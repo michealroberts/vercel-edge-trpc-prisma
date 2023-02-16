@@ -9,7 +9,7 @@
   "type": "module",
   "scripts": {
     "build": "esbuild --bundle --outdir=dist src/index.ts",
-    "dev": "pnpm build && edge-runtime --listen ./dist/index.js --port 3000",
+    "dev": "pnpm build && edge-runtime --repl --listen ./dist/index.js --port 3000",
     "format": "prettier --write .",
     "lint": "eslint --ext .ts --fix",
     "lint:staged": "lint-staged",
